@@ -2,7 +2,19 @@ package com.xuzimian.bowling;
 
 public class Scorer {
 
-    public static int score(int firstKnockdownNum, Integer secondKnockdownNum, Integer thirdKnockdownNum) {
+    public static int score(int firstKnockdownNum, int secondKnockdownNum, Integer thirdKnockdownNum) {
+        if (10 > (firstKnockdownNum + secondKnockdownNum)) {
+            return firstKnockdownNum + secondKnockdownNum;
+        }
+
+        if (10 == firstKnockdownNum) {
+            return firstKnockdownNum + secondKnockdownNum + thirdKnockdownNum;
+        }
+
+        if (10 == (firstKnockdownNum + secondKnockdownNum)) {
+            return firstKnockdownNum + secondKnockdownNum + thirdKnockdownNum;
+        }
+
         return 0;
     }
 }
