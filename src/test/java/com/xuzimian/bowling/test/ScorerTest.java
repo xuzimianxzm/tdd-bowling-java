@@ -9,16 +9,20 @@ public class ScorerTest {
 
     @Test
     void when_In_a_round_given_Throw_the_ball_twice_Did_not_knock_down_the_bottles_then_zero() {
-        int first = 3, second = 5;
+        int firstKnockdownNum = 0, secondKnockdownNum = 0;
 
-        int fraction = Scorer.score(first, second, null);
+        int fraction = Scorer.score(firstKnockdownNum, secondKnockdownNum, null);
 
-        assertEquals(first + second, fraction);
+        assertEquals(firstKnockdownNum + secondKnockdownNum, fraction);
     }
 
     @Test
     void when_In_a_round_given_throw_the_ball_twice_Did_not_knock_down_all_bottles_then_Number_of_bottles_poured() {
+        int firstKnockdownNum = 3, secondKnockdownNum = 5;
 
+        int fraction = Scorer.score(firstKnockdownNum, secondKnockdownNum, null);
+
+        assertEquals(firstKnockdownNum + secondKnockdownNum, fraction);
     }
 
     @Test
